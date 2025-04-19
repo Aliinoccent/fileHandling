@@ -1,7 +1,13 @@
 const file=require("fs");
-const { json } = require("stream/consumers");
+require ("dotenv").config();
+const encrypt=require("bcrypt");
 
 // ______________________Async non blocking mathod___________________________
+
+
+const plain_Text="i am abdul , i working in node js";
+
+
 
 file.writeFile("Text.txt","Text file created done",(error)=>{
     try{
@@ -9,7 +15,9 @@ file.writeFile("Text.txt","Text file created done",(error)=>{
         console.log(error)
         return
         }
+
         console.log("data save successful");
+        
     }
     catch(error){
         console.log("not response from server ",error)
