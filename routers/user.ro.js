@@ -3,13 +3,12 @@ const router=express.Router();
 const {nodemailer}=require("../middleWare/nodemailer");
 const {middelware}=require('../middleWare/auth')
 const {OtpVerification}=require("../middleWare/otpVerification")
-const {signUp,signIn,forgetPassword,isUserValid,newPassword}=require("../controller/user.con")
-
-router.post("/auth",signUp)
-router.post("/auth/login",signIn)
-router.post("/auth/forgetPassword",middelware,nodemailer,forgetPassword);
-router.post("/auth/otp",middelware,OtpVerification,isUserValid);
-router.post ("/auth/otp/newPassword",middelware,newPassword)
+const mainController=require("../controller/index.controllers")
+router.post("/auth",mainController.signUp)
+router.post("/auth/login",mainController.signIn)
+router.post("/auth/forgetPassword",middelware,nodemailer,mainController.forgetPassword);
+router.post("/auth/otp",middelware,OtpVerification,mainController.isUserValid);
+router.post ("/auth/otp/newPassword",middelware,mainController.newPassword)
 
 
 module.exports =router

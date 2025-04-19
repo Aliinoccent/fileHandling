@@ -18,6 +18,8 @@ exports.signUp = async (req, res) => {
 
 exports.signIn = async (req, res) => {
     const { email, password } = req.body;
+try {
+    console.log("signin run")
     const emailAlready = await User.findOne({ email });
     if (!emailAlready) {
         res.status(400).json({ message: "email not exist" });
@@ -30,6 +32,9 @@ exports.signIn = async (req, res) => {
     }
     const token=LoginToken({email});
     res.status(200).json({ messege: "login successfully",token:token });
+} catch (error) {
+    res.json(error)
+}
 }
 
 exports.forgetPassword=async(req,res)=>{
