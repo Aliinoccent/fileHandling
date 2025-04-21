@@ -1,7 +1,7 @@
  
 
 
-     const {signUp,signIn,forgetPassword,isUserValid,newPassword}=require("../controller/user.con")
+     const {signUp,signIn,forgetPassword,isUserValid,newPassword}=require("../controller/auth.con")
 
     module.exports={
         signUp,

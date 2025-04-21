@@ -2,7 +2,7 @@
 
 var nodemailer = require('nodemailer');
 var random_number=require("random-number");
-const {otpset,otpGet}=require("../lib/otpStore")
+
 
 const  otp= function genrateOtp(){
   var options = {
@@ -33,7 +33,7 @@ var mailOptions = {
   from: 'aliinoccent786@gmail.com',
   to: 'abdulrehman.cs.123@gmail.com',
   subject: "Otp recover password",
-  text:`your password will be recover using from otp 5 digits code  =>  ${sentOtp}`
+  text:`your password will be recover using from otp 5 digits code  =>  ${sentOtp.otp}`
 };
 
  const info= await transporter.sendMail(mailOptions)
