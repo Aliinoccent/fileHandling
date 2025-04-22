@@ -4,26 +4,32 @@ const { LoginToken } = require("../lib/jwt")
 const { varifyPass, hashingPassword } = require("../lib/encryption")
 exports.signUp = async (req, res) => {
     const { email, password, fullName } = req.body;
+    try {
+        const alreadyExist = await User.findOne({ email })
+        console.log("alreadyExist", alreadyExist)
 
-    const alreadyExist = await User.findOne({ email })
-    console.log("alreadyExist",alreadyExist)
 
+        if (alreadyExist && alreadyExist.signUpOtp === false) {
+            await User.updateOne({email:alreadyExist.email},{$set:{otp: req.sentOtp}})
+            res.status(400).json({ messege: "email already exist ,please enter verify confirmation code" });
 
-    if (alreadyExist && alreadyExist.signUpOtp===false) {
-        res.status(400).json({ messege: "email already exist , verify confirmation code" });
-        return;
+            return;
+        }
+        if (alreadyExist && alreadyExist.signUpOtp === true) {
+            const sentOtp = req.sentOtp
+            console.log("sentOtp", sentOtp);
+            return res.status(300).json({ message: "user already exist" })
+
+        }
+
+        const createHashPassword = await hashingPassword(password)
+        console.log("cratedHassPassword", createHashPassword);
+        const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp });
+        res.status(200).json(UserData);
+
+    } catch (error) {
+        res.status(500).json({ message: error })
     }
-    if(alreadyExist && alreadyExist.signUpOtp===true){
-        const sentOtp = req.sentOtp
-        console.log("sentOtp",sentOtp);
-        return res.status(300).json({message:"user already exist"})
-        
-    }
-
-    const createHashPassword = await hashingPassword(password)
-    console.log("cratedHassPassword", createHashPassword);
-    const UserData = await User.insertOne({ email, password: createHashPassword, fullName,signUpOtp:false,otp:req.sentOtp });
-    res.status(200).json(UserData);
 }
 
 exports.signIn = async (req, res) => {
@@ -52,25 +58,23 @@ exports.signIn = async (req, res) => {
 }
 
 exports.forgetPassword = async (req, res) => {
-    const data = req.user;
+    // const data = req.user;
     // console.log("req.user",data);
     const sentOtp = req.sentOtp
-
     const { email } = req.body;
-    
-    try {
 
+    try {
         const userExist = await User.findOne({ email });
         if (!userExist) {
             res.status(400).json({ message: "user dose not exist" })
             return
         }
-        console.log(sentOtp,"this is sent  Otp")
-        const otpAddInMonooge = await User.updateOne({ email }, { $set: { signUpOtp: true,otp:sentOtp }} );
-        return res.json( otpAddInMonooge );
+        console.log(sentOtp, "this is sent  Otp")
+        const otpAddInMonooge = await User.updateOne({ email }, { $set: { signUpOtp: true, otp: sentOtp } });
+        return res.json(otpAddInMonooge);
     }
     catch (error) {
-        res.status(500).json({ message:"error ha", error })
+        res.status(500).json({ message: "error ha", error })
         console.log(error)
     }
 
@@ -78,29 +82,29 @@ exports.forgetPassword = async (req, res) => {
 }
 exports.isUserValid = async (req, res) => {
     const email = req.email;// from otp varification
-    const update = await User.updateOne({ email }, { $unset: { otp: "" } },{$set:{signUpOtp:true}})
+    const update = await User.updateOne({ email }, { $unset: { otp: "" } , $set: { signUpOtp: true } })
 
     res.status(200).json({ messege: "delete otp success fully", update });
 }
 
 exports.newPassword = async (req, res) => {
-    const { email,password } = req.body;
+    const { email, password } = req.body;
     try {
         if (!password) {
             return res.status(401).json({ messege: "password required" });
         }
-        if(!email){
+        if (!email) {
 
             return res.status(401).json({ messege: "email required" });
         }
-        const user=await User.findOne({email});
-        if(!user){
+        const user = await User.findOne({ email });
+        if (!user) {
             return res.status(401).json({ messege: "email is not exist" });
         }
         console.log(user);
-        const hashpasword=await hashingPassword(password);
+        const hashpasword = await hashingPassword(password);
         console.log(hashpasword)
-        const update = await User.updateOne({ email }, { $set: { password:hashpasword } });
+        const update = await User.updateOne({ email }, { $set: { password: hashpasword } });
         res.status(200).json({ messege: "update password successful", update });
 
     } catch (error) {

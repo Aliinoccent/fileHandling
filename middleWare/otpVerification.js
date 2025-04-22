@@ -18,7 +18,7 @@ exports.OtpVerification = async (req, res, next) => {
       }
       const oldOtpTime= userData.otp.time;
       
-      console.log(oldOtpTime,"old time")
+      console.log("old time",oldOtpTime, "currentTime",minuts)
       
       const diffTime = minuts - oldOtpTime;
       console.log("diff time",diffTime);
@@ -26,26 +26,22 @@ exports.OtpVerification = async (req, res, next) => {
       let otpBool=false;
       if (minuts >= oldOtpTime && diffTime<=2){
         
-        if (userData.otp.otp===otp){
+        if (userData.otp.otp===otp){  // otp match 
           
           bool=true;
         }
         otpBool=true
-  
       }
       if(bool){
           req.email=userData.email;
-  
           req.otp=userData.otp.otp;
-          
-
           next();
       }
       else if (bool==false && otpBool==true){
-         return res.status(400).json({messege:"otp is expaire"});
+         return res.status(400).json({messege:"otp is invalid "});
       }
       else{
-        return res.status(400).json({message:"opt invalid"});
+        return res.status(400).json({message:"opt exapire"});
       }
   
 
