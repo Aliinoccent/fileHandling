@@ -14,4 +14,9 @@ router.post("/auth/otp",OtpVerification,mainController.isUserValid);
 router.post ("/auth/otp/newPassword",mainController.newPassword)
 
 
+
+
+
+
+
 module.exports =router

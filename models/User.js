@@ -19,6 +19,10 @@ const UserSchema=new mongodb.Schema({
     signUpOtp:{
         type:Boolean,
         require:true
+    },
+    role:{
+        type:String,
+        default:"user"
     }
 },{ timestamps: true })
 const User=mongodb.model("User",UserSchema)

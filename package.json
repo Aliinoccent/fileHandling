@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "dateformat": "^5.0.3",
     "dotenv": "^16.5.0",
     "encrypt": "^0.0.1",
     "express": "^5.1.0",
