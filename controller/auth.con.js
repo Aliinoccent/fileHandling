@@ -11,9 +11,9 @@ exports.signUp = async (req, res) => {
 
         if (alreadyExist && alreadyExist.signUpOtp === false) {
             await User.updateOne({email:alreadyExist.email},{$set:{otp: req.sentOtp}})
-            res.status(400).json({ messege: "email already exist ,please enter verify confirmation code" });
+            return res.status(400).json({ messege: "email already exist ,please enter verify confirmation code" });
 
-            return;
+            
         }
         if (alreadyExist && alreadyExist.signUpOtp === true) {
             const sentOtp = req.sentOtp
@@ -21,11 +21,15 @@ exports.signUp = async (req, res) => {
             return res.status(300).json({ message: "user already exist" })
 
         }
+        
 
         const createHashPassword = await hashingPassword(password)
         console.log("cratedHassPassword", createHashPassword);
-        const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp });
-        res.status(200).json(UserData);
+
+        const existSuperAdmin=await User.findOne({role:'superAdmin'});
+        const role = existSuperAdmin ?'user':'superAdmin'
+        const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp,role });
+      return  res.status(200).json(UserData);
 
     } catch (error) {
         res.status(500).json({ message: error })
@@ -37,23 +41,27 @@ exports.signIn = async (req, res) => {
     const { email, password } = req.body;
     try {
         console.log("sginin controller")
-        console.log("signin run")
+        console.log("signin run",email,password)
         const emailAlready = await User.findOne({ email });
+        console.log(emailAlready);
         if (!emailAlready) {
             res.status(400).json({ message: "email not exist" });
             return
         }
-        const verifyPassword = await varifyPass(password, emailAlready.password)
+        const hashPassword=emailAlready.password;
+        const verifyPassword = await varifyPass(password, hashPassword)
+        console.log(verifyPassword);
         if (verifyPassword) {
-            const token = LoginToken({ email });
-            res.status(200).json({ messege: "login successfully", token: token });
+            const token = LoginToken({ email, userId: emailAlready._id });
+            console.log(token);
+           return res.status(200).json({ messege: "login successfully", token: token });
         }
-        else {
-            res.status(400).json({ message: "password is not match" });
-            return
-        }
+    
+          return  res.status(400).json({ message: "password is not match" });
+           
+    
     } catch (error) {
-        res.json(error)
+        res.json({error: error.message })
     }
 }
 

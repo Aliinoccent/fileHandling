@@ -2,8 +2,8 @@
 
 
      const {signUp,signIn,forgetPassword,isUserValid,newPassword}=require("../controller/auth.con")
-     const {getAllUsers}=require("./users.con");
-     const {createTask,getTaskByUserId}=require("./task.con")
+     const {getAllUsers,roleChange}=require("./users.con");
+     const {createTask,getTaskByUserId,updatetaskStatus}=require("./task.con")
 
     module.exports={
         signUp,
@@ -13,5 +13,7 @@
         newPassword,
         getAllUsers,
         createTask,
-        getTaskByUserId
+        getTaskByUserId,
+        updatetaskStatus,
+        roleChange
     }

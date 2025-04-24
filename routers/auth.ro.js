@@ -5,13 +5,13 @@ const {nodemailer}=require("../middleWare/nodemailer");
 const {OtpVerification}=require("../middleWare/otpVerification")
 const mainController=require("../controller/index.controllers")
 console.log("user router")
-router.post("/auth",nodemailer,mainController.signUp);
-router.post("/auth/signUpOtp",OtpVerification,mainController.isUserValid)
+router.post("/",nodemailer,mainController.signUp);
+router.post("/signUpOtp",OtpVerification,mainController.isUserValid)
 
-router.post("/auth/login",mainController.signIn)
-router.post("/auth/forgetPassword",nodemailer,mainController.forgetPassword);
-router.post("/auth/otp",OtpVerification,mainController.isUserValid);
-router.post ("/auth/otp/newPassword",mainController.newPassword)
+router.post("/login",mainController.signIn)
+router.post("/forgetPassword",nodemailer,mainController.forgetPassword);
+router.post("/otp",OtpVerification,mainController.isUserValid);
+router.post ("/otp/newPassword",mainController.newPassword)
 
 
 

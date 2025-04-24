@@ -22,6 +22,7 @@ const UserSchema=new mongodb.Schema({
     },
     role:{
         type:String,
+        enum:["admin","user","superAdmin"],
         default:"user"
     }
 },{ timestamps: true })
