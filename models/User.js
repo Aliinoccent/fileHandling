@@ -24,7 +24,11 @@ const UserSchema=new mongodb.Schema({
         type:String,
         enum:["admin","user","superAdmin"],
         default:"user"
-    }
+    },
+    active:{
+        type:Boolean,
+        default:true
+    },
 },{ timestamps: true })
 const User=mongodb.model("User",UserSchema)
 module.exports=User;

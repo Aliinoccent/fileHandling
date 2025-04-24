@@ -43,13 +43,12 @@ exports.signIn = async (req, res) => {
         console.log("sginin controller")
         console.log("signin run",email,password)
         const emailAlready = await User.findOne({ email });
-        console.log(emailAlready);
         if (!emailAlready) {
-            res.status(400).json({ message: "email not exist" });
-            return
+            return res.status(400).json({ message: "email not exist" });
         }
-        const hashPassword=emailAlready.password;
-        const verifyPassword = await varifyPass(password, hashPassword)
+        // const hashPassword=emailAlready.password;
+       
+        const verifyPassword = await varifyPass(password, emailAlready.password)
         console.log(verifyPassword);
         if (verifyPassword) {
             const token = LoginToken({ email, userId: emailAlready._id });

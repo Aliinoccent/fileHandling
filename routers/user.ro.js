@@ -4,7 +4,8 @@ const router=express.Router();
 const {middelware}=require('../middleWare/auth')
 const mainController=require("../controller/index.controllers")
 
-router.get('/allUsers',mainController.getAllUsers);
+router.get('/allUsers',middelware,mainController.getAllUsers);
 router.put('/roleChange/:id',middelware,mainController.roleChange);
+router.put("/active/:id",middelware,mainController.activeUserBehaviour)
 
 module.exports=router;
