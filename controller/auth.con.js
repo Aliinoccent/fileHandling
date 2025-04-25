@@ -10,10 +10,10 @@ exports.signUp = async (req, res) => {
 
 
         if (alreadyExist && alreadyExist.signUpOtp === false) {
-            await User.updateOne({email:alreadyExist.email},{$set:{otp: req.sentOtp}})
+            await User.updateOne({ email: alreadyExist.email }, { $set: { otp: req.sentOtp } })
             return res.status(400).json({ messege: "email already exist ,please enter verify confirmation code" });
 
-            
+
         }
         if (alreadyExist && alreadyExist.signUpOtp === true) {
             const sentOtp = req.sentOtp
@@ -21,15 +21,15 @@ exports.signUp = async (req, res) => {
             return res.status(300).json({ message: "user already exist" })
 
         }
-        
+
 
         const createHashPassword = await hashingPassword(password)
         console.log("cratedHassPassword", createHashPassword);
 
-        const existSuperAdmin=await User.findOne({role:'superAdmin'});
-        const role = existSuperAdmin ?'user':'superAdmin'
-        const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp,role });
-      return  res.status(200).json(UserData);
+        const existSuperAdmin = await User.findOne({ role: 'superAdmin' });
+        const role = existSuperAdmin ? 'user' : 'superAdmin'
+        const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp, role });
+        return res.status(200).json(UserData);
 
     } catch (error) {
         res.status(500).json({ message: error })
@@ -41,26 +41,34 @@ exports.signIn = async (req, res) => {
     const { email, password } = req.body;
     try {
         console.log("sginin controller")
-        console.log("signin run",email,password)
+        console.log("signin run", email, password)
         const emailAlready = await User.findOne({ email });
         if (!emailAlready) {
             return res.status(400).json({ message: "email not exist" });
         }
         // const hashPassword=emailAlready.password;
-       
+
         const verifyPassword = await varifyPass(password, emailAlready.password)
         console.log(verifyPassword);
         if (verifyPassword) {
-            const token = LoginToken({ email, userId: emailAlready._id });
-            console.log(token);
-           return res.status(200).json({ messege: "login successfully", token: token });
+            //user is enable or active status
+            if (emailAlready.active === "false") {
+                return res.status(401).json({ messege: "user disable now" })
+            }
+            else {
+                const token = LoginToken({ email, userId: emailAlready._id });
+                await User.updateOne({email}, {$set:{token}})
+                console.log(token);
+                return res.status(200).json({ messege: "login successfully", token: token });
+            }
+
         }
-    
-          return  res.status(400).json({ message: "password is not match" });
-           
-    
+
+        return res.status(400).json({ message: "password is not match" });
+
+
     } catch (error) {
-        res.json({error: error.message })
+        res.json({ error: error.message })
     }
 }
 
@@ -89,7 +97,7 @@ exports.forgetPassword = async (req, res) => {
 }
 exports.isUserValid = async (req, res) => {
     const email = req.email;// from otp varification
-    const update = await User.updateOne({ email }, { $unset: { otp: "" } , $set: { signUpOtp: true } })
+    const update = await User.updateOne({ email }, { $unset: { otp: "" }, $set: { signUpOtp: true } })
 
     res.status(200).json({ messege: "delete otp success fully", update });
 }
@@ -118,4 +126,19 @@ exports.newPassword = async (req, res) => {
         res.status(500).json({ messege: "newPassowrd controller error : ", error })
     }
 
+}
+exports.logout=async(req,res)=>{
+    const {email,userId}=req.user;
+    try {
+        const user=await User.findOne({email});
+        if(!user){
+            res.status(401).json({message:"user not found"});
+        }
+        const token=LoginToken({email});
+        console.log("logoutToken",token);
+        await User.updateOne({_id:userId},{$set:{token}});
+        res.status(200).json({messege:'logout Successfully'})
+    } catch (error) {
+        return res.status(200).json({messege:error})
+    }
 }

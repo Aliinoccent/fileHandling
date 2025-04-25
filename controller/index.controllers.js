@@ -1,7 +1,7 @@
  
 
 
-     const {signUp,signIn,forgetPassword,isUserValid,newPassword}=require("../controller/auth.con")
+     const {signUp,signIn,forgetPassword,isUserValid,newPassword,logout}=require("../controller/auth.con")
      const {getAllUsers,roleChange,activeUserBehaviour}=require("./users.con");
      const {createTask,getTaskByUserId,updatetaskStatus}=require("./task.con")
 
@@ -11,6 +11,7 @@
         forgetPassword,
         isUserValid,
         newPassword,
+        logout,
         getAllUsers,
         createTask,
         getTaskByUserId,

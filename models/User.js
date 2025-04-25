@@ -29,6 +29,10 @@ const UserSchema=new mongodb.Schema({
         type:Boolean,
         default:true
     },
+    token:{
+        type:String,
+        
+    }
 },{ timestamps: true })
 const User=mongodb.model("User",UserSchema)
 module.exports=User;
