@@ -4,6 +4,7 @@ const { LoginToken } = require("../lib/jwt")
 const { varifyPass, hashingPassword } = require("../lib/encryption")
 exports.signUp = async (req, res) => {
     const { email, password, fullName } = req.body;
+    
     try {
         const alreadyExist = await User.findOne({ email })
         console.log("alreadyExist", alreadyExist)

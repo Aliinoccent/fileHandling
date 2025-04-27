@@ -4,14 +4,14 @@ const HistorySchema= mongoose.Schema({
     user:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User",
-        required:true
+        require:true
     },
     path:{
         type:String,
         require:true
     }
    
-},{Timestamp:true})
+},{timestamps:true})
 
 const HistoryTracking=mongoose.model("history",HistorySchema);
 
