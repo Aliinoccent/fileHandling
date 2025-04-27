@@ -16,12 +16,14 @@
     "dotenv": "^16.5.0",
     "encrypt": "^0.0.1",
     "express": "^5.1.0",
+    "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
     "mongodb": "^6.15.0",
     "mongoose": "^8.13.2",
     "nodemailer": "^6.10.1",
     "nodemon": "^3.1.9",
-    "random-number": "^0.0.9"
+    "random-number": "^0.0.9",
+    "winston": "^3.17.0"
   }
 }

@@ -5,8 +5,9 @@ const {middelware}=require('../middleWare/auth')
 const {OtpVerification}=require("../middleWare/otpVerification")
 const mainController=require("../controller/index.controllers")
 const {HistoryTrack}=require("../middleWare/historyTracking")
+const userValidation =require("../middleWare/joiValidation")
 console.log("user router")
-router.post("/",nodemailer,mainController.signUp);
+router.post("/",userValidation,nodemailer,mainController.signUp);
 router.post("/signUpOtp",OtpVerification,mainController.isUserValid)
 
 router.post("/login",mainController.signIn)

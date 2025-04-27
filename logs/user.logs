@@ -1,0 +1,108 @@
+2025-04-27 09:50:47, [info] messege: user data {
+  _id: new ObjectId('680cd516272e193d657709f2'),
+  fullName: 'superAdmin',
+  email: 'superAdmin@gmail.com',
+  password: '$2b$10$ShmLQTTalu/fipaL8Wz.1eHVqsHZ/kEeiVpdGVBPJVv69eAYeFZvG',
+  signUpOtp: true,
+  role: 'superAdmin',
+  active: true,
+  createdAt: 2025-04-26T12:44:06.170Z,
+  updatedAt: 2025-04-27T16:50:33.666Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyQWRtaW5AZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q1MTYyNzJlMTkzZDY1NzcwOWYyIiwiaWF0IjoxNzQ1NzcyNjMzLCJleHAiOjE3NDU4NTkwMzN9.072EaP0Xcw_8RRs_HMJHJeposnJoQYCzmP_aQSr6NXU'
+}
+2025-04-27 09:50:47, [info] messege: all user list show to superAdmin 
+2025-04-27 09:51:58, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-27T16:51:46.569Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTc3MjcwNiwiZXhwIjoxNzQ1ODU5MTA2fQ.LMTB4saxiB4mPhxRo_FWn0_VsZd9eFhViKDE-0th4Tc'
+}
+2025-04-27 09:51:58, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-26T14:47:53.529Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1Njc4ODczLCJleHAiOjE3NDU3NjUyNzN9.SQDWOwxdvcuIJgGZ2HhW_tqYM_JDjh7jbuZOkyY20e0'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-27T15:40:44.454Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTc2ODQ0NCwiZXhwIjoxNzQ1ODU0ODQ0fQ.GFD4eLGnYjTwMJc691-Imt7ijYwUFDoz5A4tfXS7E1o'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 55712, time: 1 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-27T16:01:53.559Z,
+  __v: 0
+}
+2025-04-27 09:52:30, [info] messege: user data {
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-27T16:52:19.936Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTc3MjczOSwiZXhwIjoxNzQ1ODU5MTM5fQ.pil54bihgigLJVmn_KoFwSPpqJoqgdDxV1171RNZ-hA'
+}
+2025-04-27 09:52:30, [error] messege: user not able to see the users list
+2025-04-27 10:04:44, [error] messege: only super Admin can change roll according to task sunario
+2025-04-27 10:05:13, [error] messege: only super Admin can change roll according to task sunario
+2025-04-27 10:05:39, [info] messege: user role change successfully
+2025-04-27 10:07:01, [error] messege: user id which pass from params , is not exist 
+2025-04-27 10:07:01, [error] messege: rolchange () error line 58
