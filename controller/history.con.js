@@ -51,6 +51,7 @@ exports.getHistoryById = async (req, res) => {
             historyLogger.error("admin see only users history, not admin")
             return res.status(400).json("admin see only users history, not admin");
         }
+       
         historyLogger.info("history show successfully");
         return res.status(200).json(history);
 
