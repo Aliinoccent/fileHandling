@@ -17,6 +17,7 @@ exports.middelware=async(req,res,next)=>{
             
             return res.status(400).json({messege:"token expire"})
         }
+
        req.user=verifyUser;
             next();
 

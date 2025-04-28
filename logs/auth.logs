@@ -26,3 +26,49 @@
 2025-04-27 01:38:05, [info] messege: user signin succcssfully
 2025-04-27 02:37:26, [warn] messege: user disable now
 2025-04-27 02:37:43, [info] messege: user signin succcssfully
+2025-04-27 09:27:58, [error] messege: already exist
+2025-04-27 09:27:58, [error] messege: email already exist ,please enter verify confirmation code
+2025-04-27 09:28:23, [info] messege: user signin succcssfully
+2025-04-27 09:40:27, [info] messege: user signin succcssfully
+2025-04-27 10:04:07, [error] messege: Server error authloger is not a function
+2025-04-27 10:06:18, [error] messege: Server error authloger is not a function
+2025-04-27 10:06:27, [info] messege: user signin succcssfully
+2025-04-27 10:24:01, [info] messege: user signin succcssfully
+2025-04-27 10:29:04, [info] messege: user signin succcssfully
+2025-04-27 10:32:40, [info] messege: user signin succcssfully
+2025-04-27 10:40:24, [info] messege: user signin succcssfully
+2025-04-27 10:41:11, [info] messege: user signin succcssfully
+2025-04-27 10:44:11, [info] messege: user signin succcssfully
+2025-04-27 10:58:44, [info] messege: user signin succcssfully
+2025-04-27 10:59:12, [info] messege: user signin succcssfully
+2025-04-27 11:47:22, [info] messege: user signin succcssfully
+2025-04-27 11:49:03, [info] messege: user signin succcssfully
+2025-04-28 12:28:39, [info] messege: user signin succcssfully
+2025-04-28 12:32:47, [warn] messege: user disable now
+2025-04-28 12:34:19, [info] messege: user signin succcssfully
+2025-04-28 12:52:50, [info] messege: user signin succcssfully
+2025-04-28 12:57:20, [warn] messege: user disable now
+2025-04-28 12:57:36, [info] messege: user signin succcssfully
+2025-04-28 01:34:49, [warn] messege: user disable now
+2025-04-28 01:46:35, [error] messege: Server error authloger is not a function
+2025-04-28 01:46:44, [info] messege: user signin succcssfully
+2025-04-28 01:47:37, [error] messege: already exist
+2025-04-28 01:47:38, [error] messege: email already exist ,please enter verify confirmation code
+2025-04-28 01:50:08, [error] messege: already exist
+2025-04-28 01:51:28, [info] messege: user signin succcssfully
+2025-04-28 01:51:44, [error] messege: already exist
+2025-04-28 01:52:08, [error] messege: already exist
+2025-04-28 01:54:58, [error] messege: already exist
+2025-04-28 01:55:48, [info] messege: user signin succcssfully
+2025-04-28 01:56:09, [error] messege: already exist
+2025-04-28 01:56:09, [info] messege: user created succcssfully
+2025-04-28 01:58:55, [error] messege: already exist
+2025-04-28 01:58:55, [error] messege: email already exist ,please enter verify confirmation code
+2025-04-28 01:59:43, [error] messege: email not exist
+2025-04-28 02:00:00, [info] messege: user signin succcssfully
+2025-04-28 02:00:45, [error] messege: already exist
+2025-04-28 02:00:46, [info] messege: user created succcssfully
+2025-04-28 02:01:06, [error] messege: delte otp successfully  [object Object]
+2025-04-28 02:01:37, [error] messege: already exist
+2025-04-28 02:01:38, [info] messege: user created succcssfully
+2025-04-28 02:02:00, [error] messege: delte otp successfully  [object Object]

@@ -16,10 +16,10 @@ const createLoggers=(apiName)=>{
 
 const authloger=createLoggers('auth.logs');
 const userLogger=createLoggers("user.logs");
-const historyloger=createLoggers("history.logs");
+const historyLogger=createLoggers("history.logs");
 
 module.exports={
     authloger,
     userLogger,
-    historyloger,
+    historyLogger,
 }

@@ -37,6 +37,78 @@ exports.signUp = async (req, res) => {
     }
 }
 
+
+
+exports.adminSginUpUser = async (req, res) => {
+    const { email, password, fullName,role } = req.body;
+    const{userId}=req.user;
+    
+    try {
+        const user=await User.findOne({_id:userId});
+        if(user.role==="user"){
+            return res.status(403).json("user not able to create user");
+        }
+
+        const alreadyExist = await User.findOne({ email })
+        authloger.error("already exist");
+        console.log("alreadyExist", alreadyExist)
+
+
+        if (alreadyExist && alreadyExist.signUpOtp === false) {
+            await User.updateOne({ email: alreadyExist.email }, { $set: { otp: req.sentOtp } })
+            authloger.error("email already exist ,please enter verify confirmation code")
+            return res.status(400).json({ messege: "email already exist ,please enter verify confirmation code" });
+        }
+        if (alreadyExist && alreadyExist.signUpOtp === true) {
+            const sentOtp = req.sentOtp
+            console.log("sentOtp", sentOtp);
+            return res.status(400).json({ message: "user already exist" })
+        }
+        const createHashPassword = await hashingPassword(password)
+        console.log("cratedHassPassword", createHashPassword);
+
+
+        if(user.role==="admin"&& role==="user" ){
+
+            const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp, role });
+            authloger.info("user created succcssfully");
+            return res.status(200).json(UserData);
+        }
+        if(user.role==="superAdmin" && role==="admin"){
+            
+            const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp, role });
+            authloger.info("user created succcssfully");
+            return res.status(200).json(UserData);
+        }
+        if(user.role==="superAdmin" && role==="user"){
+            
+            const UserData = await User.insertOne({ email, password: createHashPassword, fullName, signUpOtp: false, otp: req.sentOtp, role });
+            authloger.info("user created succcssfully");
+            return res.status(200).json(UserData);
+        }
+        return res.status(400).json({messege:"not able to create"})
+
+    } catch (error) {
+        authloger.error("Server error",error);
+        res.status(500).json({ message: error })
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exports.signIn = async (req, res) => {
 
     const { email, password } = req.body;

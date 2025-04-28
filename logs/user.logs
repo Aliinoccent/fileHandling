@@ -106,3 +106,636 @@
 2025-04-27 10:05:39, [info] messege: user role change successfully
 2025-04-27 10:07:01, [error] messege: user id which pass from params , is not exist 
 2025-04-27 10:07:01, [error] messege: rolchange () error line 58
+2025-04-27 11:48:19, [error] messege: error in server side of get all user ()
+2025-04-27 11:48:32, [error] messege: error in server side of get all user ()
+2025-04-27 11:48:47, [info] messege: user data {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+}
+2025-04-27 11:48:47, [error] messege: user not able to see the users list
+2025-04-27 11:49:14, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:49:14, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-27 11:51:10, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:51:10, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-27 11:51:23, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:51:23, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-27 11:51:51, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:51:51, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-27 11:53:55, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:53:56, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+}
+2025-04-27 11:57:04, [error] messege: error in server side of get all user ()
+2025-04-27 11:57:43, [error] messege: error in server side of get all user ()
+2025-04-27 11:57:50, [error] messege: error in server side of get all user ()
+2025-04-27 11:59:31, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:59:31, [error] messege: error in server side of get all user ()
+2025-04-27 11:59:48, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-27 11:59:48, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+}
+2025-04-28 12:00:39, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-28 12:00:39, [info] messege: user list show to admin {
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+},{
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+}
+2025-04-28 12:01:19, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-28 12:01:19, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+}
+2025-04-28 12:02:48, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-28 12:02:48, [info] messege: user list show to admin {
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-28 12:04:57, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-28 12:04:58, [info] messege: user list show to admin {
+  _id: new ObjectId('680e4897e5490e2a9a238cb2'),
+  fullName: 'user4',
+  email: 'user4@gmail.com',
+  password: '$2b$10$spJDDie1zdus1MkSOEW9x.tn1OlkJZ0nRl1uOQO7Gki2dMpNxEgMO',
+  otp: { otp: 61430, time: 10 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T15:09:11.380Z,
+  updatedAt: 2025-04-27T15:18:50.560Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXI0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGU0ODk3ZTU0OTBlMmE5YTIzOGNiMiIsImlhdCI6MTc0NTc2NzEzMCwiZXhwIjoxNzQ1ODUzNTMwfQ.BkCBRXFrQhtFRWYtUHrYkKhoDxMPoaz5U-LQ5gHYZTI'
+},{
+  _id: new ObjectId('680e54f1b29514e6ccfb8203'),
+  fullName: 'user5',
+  email: 'user5@gmail.com',
+  password: '$2b$10$GgmVROSVbvT1OqSJ1tmkL.LZOk/jvkDcIEOPNoyrDgJsYcXyUl4de',
+  otp: { otp: 62439, time: 27 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T16:01:53.559Z,
+  updatedAt: 2025-04-28T04:27:58.766Z,
+  __v: 0
+}
+2025-04-28 12:05:21, [info] messege: user data {
+  _id: new ObjectId('680cd596272e193d657709fe'),
+  fullName: 'admin',
+  email: 'admin@gmail.com',
+  password: '$2b$10$2LotGAJ1nL10j/zTEW8Epu/mIecEZqxBvFr6x1W0vURI6EApVRUNm',
+  signUpOtp: true,
+  role: 'admin',
+  active: true,
+  createdAt: 2025-04-26T12:46:14.618Z,
+  updatedAt: 2025-04-28T06:49:03.551Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGNkNTk2MjcyZTE5M2Q2NTc3MDlmZSIsImlhdCI6MTc0NTgyMjk0MywiZXhwIjoxNzQ1OTA5MzQzfQ.exvq56Wb0Vn6bKpCvE-qH_2gaJZyPAWE2ounKKfzu9U'
+}
+2025-04-28 12:05:21, [info] messege: user list show to admin {
+  _id: new ObjectId('680cd66e272e193d65770a0b'),
+  fullName: 'user',
+  email: 'user@gmail.com',
+  password: '$2b$10$toRnCHsb0IO1d1agq40AYORlCtR6EwJzII1Jb2wC8spPT.DESoEaq',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-26T12:49:50.429Z,
+  updatedAt: 2025-04-28T06:47:22.723Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwidXNlcklkIjoiNjgwY2Q2NmUyNzJlMTkzZDY1NzcwYTBiIiwiaWF0IjoxNzQ1ODIyODQyLCJleHAiOjE3NDU5MDkyNDJ9.atLJl2LeidlS_ImalW5ht9wWhfQiJ_Yaulk12rTnm_Q'
+},{
+  _id: new ObjectId('680e1df7b7ca4b2a75684c81'),
+  fullName: 'user2',
+  email: 'user2@gmail.com',
+  password: '$2b$10$imL5If6XJ.K8L443U07DXeQV9jS67fpDKDUcxf/Sb1xMBdyAcTTFC',
+  otp: { otp: 54326, time: 8 },
+  signUpOtp: false,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:07:19.932Z,
+  updatedAt: 2025-04-27T12:08:08.441Z,
+  __v: 0
+},{
+  _id: new ObjectId('680e1e456d6b344e40bd48f4'),
+  fullName: 'user3',
+  email: 'user3@gmail.com',
+  password: '$2b$10$XsJbJq8H642n/NvOS0axDe3fTFXDlxmvxgDloH.elfNk92ieEbDai',
+  signUpOtp: true,
+  role: 'user',
+  active: true,
+  createdAt: 2025-04-27T12:08:38.004Z,
+  updatedAt: 2025-04-28T05:24:01.070Z,
+  __v: 0,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4MGUxZTQ1NmQ2YjM0NGU0MGJkNDhmNCIsImlhdCI6MTc0NTgxNzg0MSwiZXhwIjoxNzQ1OTA0MjQxfQ.J7a7utDjM74uEW9peanB8xYPuK3fH92H_TBRSCb1Ylw'
+}
+2025-04-28 12:53:14, [info] messege: user acitvites updated 
+2025-04-28 12:55:12, [info] messege: user acitvites updated 
+2025-04-28 12:55:24, [info] messege: user acitvites updated 
+2025-04-28 12:56:07, [info] messege: user acitvites updated 
+2025-04-28 12:56:30, [info] messege: user acitvites updated 
+2025-04-28 12:57:29, [info] messege: user acitvites updated 
+2025-04-28 12:57:50, [info] messege: user acitvites updated 

@@ -1,19 +1,27 @@
 
 const User = require("../models/User")
 const {userLogger}=require("../config/witson");
+const {LoginToken}= require('../lib/jwt')
 
 exports.getAllUsers = async (req, res) => {
     const { userId } = req.user;
+    const page=req.query.page||1
+    const limit=req.query.limit||3
+   
     try {
+        
+        
+        console.log(page,limit);
+        const skipItems=(page-1)*limit;
         const admin = await User.findOne({ _id: userId });
         userLogger.info(`user data ${admin}`);
         if (admin.role === "admin" && admin.role !== "superAdmin") {
-            const allUsers = await User.find({ role: "user" })
+            const allUsers = await User.find({ role: "user" }).skip(skipItems).limit(limit).sort({fullName:1})
             userLogger.info(`user list show to admin ${allUsers}`)
             return res.status(200).json(allUsers)
         }
         if (admin.role === "superAdmin") {
-            const allUsers =await User.find({})
+            const allUsers =await User.find({}).skip(skipItems).limit(limit)
             userLogger.info('all user list show to superAdmin ')
             return res.status(200).json(allUsers)
         }
@@ -82,7 +90,9 @@ exports.activeUserBehaviour=async(req,res)=>{
             }
            if(userObj.role==="user"){
             userLogger.info("user acitvites updated ")
-            const updateData= await User.updateOne({email:userObj.email},{$set:{active:!userObj.active}});
+            const genToken=LoginToken({email:userObj.email});
+            console.log(genToken,"gentoken 94")
+            const updateData= await User.updateOne({email:userObj.email},{$set:{active:!userObj.active,token:genToken}});
             return res.status(200).json(updateData)
            }
         }
@@ -98,7 +108,10 @@ exports.activeUserBehaviour=async(req,res)=>{
                 return res.status(403).json({messege:"only change acitivites of users or admins"})
             }
         
-            const updateData= await User.updateOne({email:userObj.email},{$set:{active:!userObj.active}});
+            const genToken=LoginToken({email:userObj.email});
+            console.log(genToken,"gentoken ")
+            const updateData= await User.updateOne({email:userObj.email},{$set:{active:!userObj.active,token:genToken}});
+            // const updateData= await User.updateOne({email:userObj.email},{$set:{active:!userObj.active}});
             return res.status(200).json(updateData)
            
         }
